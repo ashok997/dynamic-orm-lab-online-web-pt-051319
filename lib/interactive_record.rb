@@ -69,7 +69,7 @@ class InteractiveRecord
   # end
   
   def self.find_by(hash)
-    
+    array =[]
     hash.each do|k,v|
       array << k << v
       binding.pry
