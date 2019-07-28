@@ -75,7 +75,7 @@ class InteractiveRecord
       binding.pry
     end
     
-    sql = "SELECT * FROM #{self.table_name} WHERE "{array[0]}" = ?"
+    sql = "SELECT * FROM #{self.table_name} WHERE "array[0]" = ?"
     DB[:conn].execute(sql, array[1])
   
   end
