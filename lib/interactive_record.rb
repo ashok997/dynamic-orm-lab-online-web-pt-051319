@@ -58,7 +58,7 @@ class InteractiveRecord
   
   def self.find_by(hash)
    id = hash[:id]
-   #binding.pry
+   binding.pry
     sql = "SELECT * FROM #{self.table_name} WHERE id = ?"
     DB[:conn].execute(sql, id)
   end
