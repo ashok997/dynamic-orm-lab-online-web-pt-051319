@@ -69,7 +69,6 @@ class InteractiveRecord
   # end
   
   def self.find_by(hash)
-    array =[]
     hash.each do|k,v|
       key = k.to_s
       value = v
