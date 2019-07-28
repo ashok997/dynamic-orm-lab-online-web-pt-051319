@@ -57,7 +57,6 @@ class InteractiveRecord
   end
   
   def self.find_by(hash)
-    hash.stringify_keys
     key = hash[:key]
     value = hash[:value]
     binding.pry
