@@ -72,9 +72,8 @@ class InteractiveRecord
     array =[]
     hash.each do|k,v|
       array << k.to_s << v
-      binding.pry
     end
-    
+    binding.pry
     sql = "SELECT * FROM #{self.table_name} WHERE "array[0]" = ?"
     DB[:conn].execute(sql, array[1])
   
