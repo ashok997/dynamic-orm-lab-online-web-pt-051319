@@ -73,6 +73,7 @@ class InteractiveRecord
       key = k.to_s
       value = v
     end
+    binding.pry
   end
   
 end
