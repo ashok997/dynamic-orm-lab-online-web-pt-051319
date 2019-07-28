@@ -71,12 +71,12 @@ class InteractiveRecord
   def self.find_by(hash)
     array =[]
     hash.each do|k,v|
-      array << k.to_s << v
+      key = k.to_s
+      value = v
     end
     binding.pry
-    sql = "SELECT * FROM #{self.table_name} WHERE #{array[0]} = ?"
-    DB[:conn].execute(sql, #{array[1]})
-  
+    sql = "SELECT * FROM #{self.table_name} WHERE #{key} = ?"
+    DB[:conn].execute(sql, #{value})
   end
   
 end
