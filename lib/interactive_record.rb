@@ -75,6 +75,7 @@ class InteractiveRecord
       binding.pry
     end
     
+    sql = "SELECT * FROM #{self.table_name} WHERE #{array[0]} = ?"
     
   
   end
