@@ -63,7 +63,9 @@ class InteractiveRecord
       DB[:conn].execute(sql, grade)]
     else
       name = hash[:name]
-      
+      sql = "SELECT * FROM #{self.table_name} WHERE name = ?"
+      DB[:conn].execute(sql, name)]
+    end
   end
   
 end
