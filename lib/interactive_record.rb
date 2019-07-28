@@ -74,9 +74,6 @@ class InteractiveRecord
       key = k.to_s
       value = v
     end
-    binding.pry
-    sql = "SELECT * FROM #{self.table_name} WHERE #{key} = ?"
-    DB[:conn].execute(sql, #{value})
   end
   
 end
