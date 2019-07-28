@@ -57,7 +57,7 @@ class InteractiveRecord
   end
   
   def self.find_by(hash)
-    if hash[:name]= nil
+    if hash[:name]==nil
       grade = hash[:grade]
       sql = "SELECT * FROM #{self.table_name} WHERE grade = ?"
       DB[:conn].execute(sql, grade)
