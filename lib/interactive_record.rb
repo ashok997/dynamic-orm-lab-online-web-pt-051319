@@ -74,6 +74,8 @@ class InteractiveRecord
       array << k.to_s << v
       binding.pry
     end
+    
+    
   
   end
   
