@@ -56,15 +56,21 @@ class InteractiveRecord
     DB[:conn].execute(sql, name)
   end
   
+  # def self.find_by(hash)
+  #   if hash[:name]==nil
+  #     grade = hash[:grade]
+  #     sql = "SELECT * FROM #{self.table_name} WHERE grade = ?"
+  #     DB[:conn].execute(sql, grade)
+  #   else
+  #     name = hash[:name]
+  #     sql = "SELECT * FROM #{self.table_name} WHERE name = ?"
+  #     DB[:conn].execute(sql, name)
+  #   end
+  # end
+  
   def self.find_by(hash)
-    if hash[:name]==nil
-      grade = hash[:grade]
-      sql = "SELECT * FROM #{self.table_name} WHERE grade = ?"
-      DB[:conn].execute(sql, grade)
-    else
-      name = hash[:name]
-      sql = "SELECT * FROM #{self.table_name} WHERE name = ?"
-      DB[:conn].execute(sql, name)
+    hash.each do|k,v|
+      array << k << v
     end
   end
   
