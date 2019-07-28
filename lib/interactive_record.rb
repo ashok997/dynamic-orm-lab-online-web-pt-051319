@@ -77,7 +77,7 @@ class InteractiveRecord
       value = v
     end
     sql = "SELECT * FROM #{self.table_name} WHERE #{key} = ?"
-    DB[:conn].execute(sql, #{value})
+    DB[:conn].execute(sql, value)
     
   end
   
